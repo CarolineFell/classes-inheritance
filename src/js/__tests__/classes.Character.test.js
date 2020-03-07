@@ -13,6 +13,7 @@ test('Should be Bowman', () => {
     defence: 25,
     level: 1,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -24,6 +25,7 @@ test('Should be Swordsman', () => {
     defence: 10,
     level: 1,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -35,6 +37,7 @@ test('Should be Magician', () => {
     defence: 40,
     level: 1,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -46,6 +49,7 @@ test('Should be Undead', () => {
     defence: 25,
     level: 1,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -57,6 +61,7 @@ test('Should be Zombie', () => {
     defence: 10,
     level: 1,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -68,6 +73,7 @@ test('Should be Daemon', () => {
     defence: 40,
     level: 1,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -80,6 +86,7 @@ test('levelUp a Bowman - level 2', () => {
     defence: 30,
     level: 2,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -93,6 +100,7 @@ test('levelUp a Magician - level 6', () => {
     defence: 48,
     level: 6,
     health: 100,
+    powerMode: 'off',
   });
 });
 
@@ -101,3 +109,17 @@ test('Should throw Error', () => {
   undead.health = 0;
   expect(() => undead.levelUp()).toThrow('Character is dead. Level cannnot be upgraded');
 });
+
+// test('Get attack of Swordsman (on)', () => {
+//   const swordsman = new Swordsman();
+//   swordsman.powerMode = 'on';
+//   expect(() => { swordsman.modePowerOn = 'on' }).toThrow('Power mode has been spent');
+//   // expect(swordsman).toEqual({
+//   //   name: 'Swordsman',
+//   //   attack: 80,
+//   //   defence: 20,
+//   //   level: 1,
+//   //   health: 200,
+//   //   powerMode: 'on',
+//   // })
+// });
